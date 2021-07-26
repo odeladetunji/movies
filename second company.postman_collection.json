@@ -1,0 +1,86 @@
+{
+	"info": {
+		"_postman_id": "32a0cfd9-8469-4bdd-8154-75f90c5b3da7",
+		"name": "second company",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.tvmaze.com/search/shows?q=p",
+					"protocol": "https",
+					"host": [
+						"api",
+						"tvmaze",
+						"com"
+					],
+					"path": [
+						"search",
+						"shows"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "p"
+						},
+						{
+							"key": "size",
+							"value": "40",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getFeatured Movies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8025/getmovies",
+					"host": [
+						"localhost"
+					],
+					"port": "8025",
+					"path": [
+						"getmovies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"show\": {\n            \"id\": 19678,\n            \"url\": \"https://www.tvmaze.com/shows/19678/p-valley\",\n            \"name\": \"P-Valley\",\n            \"language\": \"English\",\n            \"genres\": \"drama\",\n            \"status\": \"Running\",\n            \"runtime\": 60,\n            \"premiered\": \"2020-07-12\",\n            \"rating\": {\n                \"average\": 4.8\n            },\n            \"network\": {\n            \n                \"name\": \"Starz\"\n        \n            },\n            \"image\": {\n                \"original\": \"https://static.tvmaze.com/uploads/images/original_untouched/262/656535.jpg\"\n            },\n            \"summary\": \"is a scripted one-hour drama that takes an unflinching and unapologetic look at the lives of pole dancers working down in the Dirty Delta. Set in an infamous Mississippi \\\"shake junt\\\" called The Pynk, <i>P-Valley</i> is an intimate window to the unexplored southern strip club world, where the desires of pro-ballers and politicians collide with the dreams of five brave women. For these women, the line between performance and reality becomes blurred, as the drama of their outside lives threaten their onstage personas. On the quest for money, power, and respect, each woman must make a choice. For some it's a step down, for others a step up, as The Pynk stage constantly shape-shifts between a platform for freedom and a gilded cage.\"\n        }\n}\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8025/savemovies",
+					"host": [
+						"localhost"
+					],
+					"port": "8025",
+					"path": [
+						"savemovies"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
