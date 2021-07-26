@@ -6,4 +6,4 @@ Movies Server
 3. run 'supervisor app.js' to start the node server.
 4. ensure you have mongodb installed
 5. localhost:8025 is the default port.
-6. 
+6. the name of the collectiong is second company.postman_collection.json
